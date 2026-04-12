@@ -12,7 +12,8 @@ const IMAGES = {
   verified: "/images/verified.png",
   waiver: "/images/waiver.png",
 
-  heroBg: "/images/top-page.png",
+  // Hero背景はUIスクショではなく別画像にする
+  heroBg: "/images/asakusa-lantern.jpg",
 } as const;
 
 const YOUTUBE_VIDEO_ID = "cxvPY9P93VM";
@@ -164,43 +165,46 @@ export default function LandingPage() {
         className="hero"
         id="home"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('${IMAGES.heroBg}')`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)), url('${IMAGES.heroBg}')`,
         }}
       >
-        <div className="hero-content">
-          <div className="hero-tagline">RUN YOUR DOJO · WITH LESS ADMIN</div>
-          <h1>BJJ DOJO MANAGER</h1>
-          <p>
-            Attendance, timetable, members, and payments —
-            <br />
-            a staff-first system your dojo will actually use.
-          </p>
+        <div className="hero-content hero-layout">
+          <div className="hero-copy">
+            <div className="hero-tagline">RUN YOUR DOJO · WITH LESS ADMIN</div>
+            <h1>BJJ DOJO MANAGER</h1>
+            <p>
+              Attendance, timetable, members, and payments —
+              <br />
+              a staff-first system your dojo will actually use.
+            </p>
 
-          <div
-            style={{
-              display: "flex",
-              gap: 12,
-              marginTop: 18,
-              flexWrap: "wrap",
-            }}
-          >
-            <a
-              href="#download"
-              onClick={handleAnchorClick}
-              className="team-cta"
-              style={{ fontSize: 14, padding: "10px 24px" }}
-              aria-label="Go to download section"
-            >
-              Download
-            </a>
-            <button
-              className="team-cta"
-              style={{ fontSize: 14, padding: "10px 24px" }}
-              onClick={() => setModalOpen(true)}
-              aria-label="Request a demo"
-            >
-              Request a demo
-            </button>
+            <div className="hero-actions">
+              <a
+                href="#download"
+                onClick={handleAnchorClick}
+                className="team-cta"
+                style={{ fontSize: 14, padding: "10px 24px" }}
+                aria-label="Go to download section"
+              >
+                Download
+              </a>
+              <button
+                className="team-cta"
+                style={{ fontSize: 14, padding: "10px 24px" }}
+                onClick={() => setModalOpen(true)}
+                aria-label="Request a demo"
+              >
+                Request a demo
+              </button>
+            </div>
+          </div>
+
+          <div className="hero-preview animate-on-scroll">
+            <img
+              src={IMAGES.topPage}
+              alt="BJJ Dojo Manager dashboard preview"
+              loading="eager"
+            />
           </div>
         </div>
       </section>
@@ -261,12 +265,18 @@ export default function LandingPage() {
       {/* About */}
       <section className="about" id="product">
         <div className="section-content">
-          <h2 className="section-title animate-on-scroll">Built for busy coaches</h2>
+          <h2 className="section-title animate-on-scroll">
+            Built for busy coaches
+          </h2>
 
           <div className="about-grid">
             <div className="about-images">
               <div className="about-image-wrapper tall animate-on-scroll">
-                <img src={IMAGES.timetable} alt="Timetable view" loading="lazy" />
+                <img
+                  src={IMAGES.timetable}
+                  alt="Timetable view"
+                  loading="lazy"
+                />
               </div>
             </div>
 
@@ -324,7 +334,8 @@ export default function LandingPage() {
               <div className="card-kicker">SOLUTION</div>
               <h3 className="card-title">Payments</h3>
               <p className="card-text">
-                Optional, predictable, and simple. Built for staff workflows first.
+                Optional, predictable, and simple. Built for staff workflows
+                first.
               </p>
               <ul className="card-list">
                 <li>Stripe-ready</li>
