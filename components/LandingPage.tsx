@@ -11,8 +11,8 @@ const IMAGES = {
   timetable: "/images/timetable.png",
   verified: "/images/verified.png",
   waiver: "/images/waiver.png",
+  announcements: "/images/announcements.png",
 
-  // Hero背景はUIスクショではなく別画像にする
   heroBg: "/images/asakusa-lantern.jpg",
 } as const;
 
@@ -168,43 +168,45 @@ export default function LandingPage() {
           backgroundImage: `linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)), url('${IMAGES.heroBg}')`,
         }}
       >
-        <div className="hero-content hero-layout">
-          <div className="hero-copy">
-            <div className="hero-tagline">RUN YOUR DOJO · WITH LESS ADMIN</div>
-            <h1>BJJ DOJO MANAGER</h1>
-            <p>
-              Attendance, timetable, members, and payments —
-              <br />
-              a staff-first system your dojo will actually use.
-            </p>
+        <div className="hero-content">
+          <div className="hero-layout">
+            <div className="hero-copy">
+              <div className="hero-tagline">RUN YOUR DOJO · WITH LESS ADMIN</div>
+              <h1>BJJ DOJO MANAGER</h1>
+              <p>
+                Attendance, timetable, members, and payments —
+                <br />
+                a staff-first system your dojo will actually use.
+              </p>
 
-            <div className="hero-actions">
-              <a
-                href="#download"
-                onClick={handleAnchorClick}
-                className="team-cta"
-                style={{ fontSize: 14, padding: "10px 24px" }}
-                aria-label="Go to download section"
-              >
-                Download
-              </a>
-              <button
-                className="team-cta"
-                style={{ fontSize: 14, padding: "10px 24px" }}
-                onClick={() => setModalOpen(true)}
-                aria-label="Request a demo"
-              >
-                Request a demo
-              </button>
+              <div className="hero-actions">
+                <a
+                  href="#download"
+                  onClick={handleAnchorClick}
+                  className="team-cta"
+                  style={{ fontSize: 14, padding: "10px 24px" }}
+                  aria-label="Go to download section"
+                >
+                  Download
+                </a>
+                <button
+                  className="team-cta"
+                  style={{ fontSize: 14, padding: "10px 24px" }}
+                  onClick={() => setModalOpen(true)}
+                  aria-label="Request a demo"
+                >
+                  Request a demo
+                </button>
+              </div>
             </div>
-          </div>
 
-          <div className="hero-preview animate-on-scroll">
-            <img
-              src={IMAGES.topPage}
-              alt="BJJ Dojo Manager dashboard preview"
-              loading="eager"
-            />
+            <div className="hero-preview animate-on-scroll">
+              <img
+                src={IMAGES.topPage}
+                alt="BJJ Dojo Manager dashboard preview"
+                loading="eager"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -273,8 +275,8 @@ export default function LandingPage() {
             <div className="about-images">
               <div className="about-image-wrapper tall animate-on-scroll">
                 <img
-                  src={IMAGES.timetable}
-                  alt="Timetable view"
+                  src={IMAGES.announcements}
+                  alt="Announcements management screen"
                   loading="lazy"
                 />
               </div>
@@ -287,9 +289,8 @@ export default function LandingPage() {
                 shouldn&apos;t be forced to use an app.
               </p>
               <p>
-                Mark attendance in seconds (manual is totally fine), keep your
-                timetable consistent, and maintain clean member records —
-                without juggling spreadsheets.
+                Send announcements clearly, keep your timetable organized, and
+                maintain clean member records — without juggling spreadsheets.
               </p>
               <p>
                 Want bookings? Turn it on. Don&apos;t want member friction? Keep
