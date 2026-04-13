@@ -256,6 +256,12 @@ nav.scrolled {
   animation: fadeIn 1s ease 0.8s forwards;
 }
 
+/* Demo video section */
+.video-section {
+  background: white;
+  padding: 6rem 5%;
+}
+
 /* About Section */
 .about {
   background: white;
@@ -348,39 +354,6 @@ nav.scrolled {
   margin-bottom: 1.5rem;
   color: #333;
   line-height: 1.8;
-}
-
-.about-bottom-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-
-.about-bottom-image {
-  height: 300px;
-  overflow: hidden;
-  background: #ddd;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.about-bottom-image.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.about-bottom-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-  display: block;
-}
-
-.about-bottom-image:hover img {
-  transform: scale(1.05);
 }
 
 /* Values Quote */
@@ -737,14 +710,6 @@ footer {
     font-size: 0.9rem;
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-bottom-grid {
-    grid-template-columns: 1fr;
-  }
-
   .image-grid {
     grid-template-columns: 1fr;
   }
@@ -767,10 +732,7 @@ footer {
   }
 }
 
-/* =========================================================
-   Feature card
-   ========================================================= */
-
+/* Feature card */
 .grid-item.feature-card {
   height: auto;
   min-height: 280px;
@@ -828,10 +790,7 @@ footer {
   }
 }
 
-/* =========================================================
-   Gallery section
-   ========================================================= */
-
+/* Gallery section */
 .gallery {
   padding: 4rem 5%;
   background: white;
@@ -881,10 +840,7 @@ footer {
   }
 }
 
-/* =========================================================
-   Pricing overrides
-   ========================================================= */
-
+/* Pricing overrides */
 #pricing {
   padding: 6rem 5%;
   background: white;
@@ -904,7 +860,6 @@ footer {
   padding-right: 1rem;
 }
 
-/* Typography */
 #pricing .text-center {
   text-align: center;
 }
@@ -969,7 +924,6 @@ footer {
   text-transform: uppercase;
 }
 
-/* Spacing */
 #pricing .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -1036,7 +990,6 @@ footer {
   margin-top: 3rem;
 }
 
-/* Layout */
 #pricing .flex {
   display: flex;
 }
@@ -1062,7 +1015,6 @@ footer {
   width: 100%;
 }
 
-/* Grid + responsive */
 #pricing .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1074,7 +1026,6 @@ footer {
   }
 }
 
-/* Cards */
 #pricing .relative {
   position: relative;
 }
@@ -1117,7 +1068,6 @@ footer {
   border-color: #d1d1d1;
 }
 
-/* Brand mapping */
 #pricing .border-blue-500 {
   border-color: var(--gold);
 }
@@ -1163,7 +1113,6 @@ footer {
   transition: all 0.25s ease;
 }
 
-/* Hover utility classes */
 #pricing .hover\:bg-gray-50:hover {
   background: #f7f7f7;
 }
@@ -1180,7 +1129,6 @@ footer {
   color: var(--dark-gray);
 }
 
-/* Buttons / CTAs */
 #pricing a.block {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1192,12 +1140,10 @@ footer {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Lists spacing */
 #pricing .space-y-3 > * + * {
   margin-top: 0.75rem;
 }
 
-/* Table */
 #pricing table {
   width: 100%;
   border-collapse: collapse;
@@ -1219,7 +1165,6 @@ footer {
   background: #f9f9f9;
 }
 
-/* Icons sizing */
 #pricing .w-5 {
   width: 20px;
 }
