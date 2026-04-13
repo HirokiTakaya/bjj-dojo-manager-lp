@@ -273,7 +273,7 @@ export default function LandingPage() {
 
           <div className="about-grid">
             <div className="about-images">
-              <div className="about-image-wrapper tall animate-on-scroll">
+              <div className="about-image-wrapper ui-wide-screen animate-on-scroll">
                 <img
                   src={IMAGES.announcements}
                   alt="Announcements management screen"

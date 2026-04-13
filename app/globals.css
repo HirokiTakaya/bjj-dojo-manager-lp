@@ -1210,3 +1210,39 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+.ui-wide-screen {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  background: #f3f5f8;
+  padding: 14px;
+  border: 1px solid #e6e9ef;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.ui-wide-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  background: white;
+}
+
+.ui-wide-screen:hover img {
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .ui-wide-screen {
+    aspect-ratio: auto;
+    padding: 10px;
+  }
+
+  .ui-wide-screen img {
+    height: auto;
+  }
+}
